@@ -45,7 +45,7 @@ app.get('/api/*', async (req, res) => {
 });
 
 // Start the server
-app.listen(3500, () => {
+app.listen(3000, () => {
     console.log('Redis caching proxy server is running on port 3000');
 });
 
