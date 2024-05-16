@@ -15,6 +15,7 @@ client.on("error", function (err) {
 
 // Set the cache expiration time (in seconds)
 const CACHE_EXPIRATION = 3600; // 1 hour
+const port = process.env.PORT || 3000;
 
 // Proxy endpoint
 app.get('/api/*', async (req, res) => {
@@ -45,7 +46,7 @@ app.get('/api/*', async (req, res) => {
 });
 
 // Start the server
-app.listen(process.env.PORT || 3000, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log('Redis caching proxy server is running on port 3000');
 });
 
